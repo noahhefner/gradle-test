@@ -1,0 +1,9 @@
+plugins {
+    id 'java-library' 
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "gov.cms.mcs.h99pa288.H99PA288Driver"
+    }
+}

@@ -1,0 +1,11 @@
+rootProject.name = 'gradle-test'
+
+// Include all modules in FEND
+new File("FEND/").listFiles().each
+{
+   if (it.directory && new File(it, 'build.gradle').exists())
+   {
+      include ":FEND:${it.name}"
+   }
+}
+
