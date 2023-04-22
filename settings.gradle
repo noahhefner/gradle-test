@@ -23,3 +23,12 @@ new File("FEND/").listFiles().each
       include ":FEND:${it.name}"
    }
 }
+
+// Include all modules in Common
+new File("Common/").listFiles().each
+{
+   if (it.directory && new File(it, 'build.gradle').exists())
+   {
+      include ":Common:${it.name}"
+   }
+}

@@ -2,6 +2,10 @@ plugins {
     id 'java-library' 
 }
 
+dependencies {
+    implementation project(':Common:Constants')
+}
+
 jar {
     manifest {
         attributes "Main-Class": "gov.cms.mcs.h99pa288.H99PA288Driver"
