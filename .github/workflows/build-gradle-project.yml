@@ -13,3 +13,8 @@ jobs:
       uses: gradle/gradle-build-action@v2
     - name: Run build with Gradle Wrapper
       run: './gradlew :FEND:H99PA288:jar'
+    - name: Save jar file
+      uses: actions/upload-artifact@v3
+      with:
+        name: H99PA288
+        path: FEND/H99PA288/build/libs/h99pa288.jar
