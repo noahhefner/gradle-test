@@ -17,4 +17,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: H99PA288
-        path: FEND/H99PA288/build/libs/h99pa288.jar
+        path: FEND/H99PA288/build/libs/H99PA288jar
