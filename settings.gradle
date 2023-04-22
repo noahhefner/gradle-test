@@ -1,3 +1,18 @@
+// GitHub actions Gradle build
+plugins {
+    id("com.gradle.enterprise") version("3.9")
+}
+
+gradleEnterprise {
+    if (System.getenv("CI") != null) {
+        buildScan {
+            publishAlways()
+            termsOfServiceUrl = "https://gradle.com/terms-of-service"
+            termsOfServiceAgree = "yes"
+        }
+    }
+}
+
 rootProject.name = 'gradle-test'
 
 // Include all modules in FEND
@@ -8,4 +23,3 @@ new File("FEND/").listFiles().each
       include ":FEND:${it.name}"
    }
 }
-
