@@ -11,6 +11,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
+
+    # Build FEND modules
     - name: Run build with Gradle Wrapper
       run: './gradlew :FEND:H99PA288:jar'
     - name: Save jar file

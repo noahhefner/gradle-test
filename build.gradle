@@ -1,0 +1,11 @@
+
+
+
+master_jar {
+    // Build FEND modules
+    new File("FEND/").listFiles().each {
+        if (it.directory && new File(it, 'build.gradle').exists()) {
+            apply from: ":FEND:${it.name}:jar"
+        }
+    }
+}
